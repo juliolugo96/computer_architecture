@@ -21,25 +21,25 @@ $ sudo apt-get install build-essential
 2.- Crea una carpeta llamada **arq_comp** donde tendrás toda tu información del curso agrupada en un solo sitio, incluida la instalación de System-C. Posicionate dentro de esta carpeta y corre lo siguiente:
 
 ```shell
-$ wget http://accellera.org/images/downloads/standards/systemc/systemc-2.3.1a.tar.gz
+$ wget https://accellera.org/images/downloads/standards/systemc/systemc-2.3.3.tar.gz
 
 ### Y luego para descomprimir
 
-$ tar -xvf systemc-2.3.1a.tar.gz
+$ tar -xvf systemc-2.3.3.tar.gz
 ```
 
-3.- Accede al directorio `systemc-2.3.1a/` y crea un directorio llamado `objdir/`.
+3.- Accede al directorio `systemc-2.3.3/` y crea un directorio llamado `objdir/`.
 
 4.- Accede a `objdir/` y crea una carpeta en el directorio `/usr/local/`:
 
 ```
-$ sudo mkdir /usr/local/systemc-2.3.1
+$ sudo mkdir /usr/local/systemc-2.3.3
 ```
 
 5.- Desde `objdir/` de nuevo, corre el script que defina la ruta de instalación en el sistema:
 
 ```
-$ sudo ../configure --prefix=/usr/local/systemc-2.3.1/
+$ sudo ../configure --prefix=/usr/local/systemc-2.3.3/
 ```
 
 6.- Ejecuta ahora los siguientes comandos de compilación:
@@ -63,7 +63,7 @@ SC_MODULE (hello_world) {
   }
 
   void say_hello() {
-    cout << "Hello World SystemC-2.3.1.\n";
+    cout << "Hello World SystemC-2.3.3.\n";
   }
 };
 
@@ -77,19 +77,19 @@ int sc_main(int argc, char* argv[]) {
 8.- Exporta la variable de entorno que contendrá la dirección de instalación de SystemC:
 
 ```shell
-export SYSTEMC_HOME=/usr/local/systemc-2.3.1/
+export SYSTEMC_HOME=/usr/local/systemc-2.3.3/
 ```
 
 9.- Compila el código utilizando g++, asegúrate que utilice la versión C++-98 para que no de errores con std::gets. Para ello, utiliza este comando si tu distro es de 64 bits.
 
 ```
-g++ -std=c++98 -I. -I$SYSTEMC_HOME/include -L. -L$SYSTEMC_HOME/lib-linux64 -Wl,-rpath=$SYSTEMC_HOME/lib-linux64 -o hello hello.cpp -lsystemc -lm
+g++ -I. -I$SYSTEMC_HOME/include -L. -L$SYSTEMC_HOME/lib-linux64 -Wl,-rpath=$SYSTEMC_HOME/lib-linux64 -o hello hello.cpp -lsystemc -lm
 ```
 
 Si es de 32 bits:
 
 ```
-g++ -std=c++98 -I. -I$SYSTEMC_HOME/include -L. -L$SYSTEMC_HOME/lib-linux -Wl,-rpath=$SYSTEMC_HOME/lib-linux -o hello hello.cpp -lsystemc -lm
+g++ -I. -I$SYSTEMC_HOME/include -L. -L$SYSTEMC_HOME/lib-linux -Wl,-rpath=$SYSTEMC_HOME/lib-linux -o hello hello.cpp -lsystemc -lm
 ```
 
 10.- Corre tu programa. Si no hubo error de ningún tipo, entonces la instalación fue correcta.
