@@ -80,7 +80,7 @@ int sc_main(int argc, char* argv[]) {
 export SYSTEMC_HOME=/usr/local/systemc-2.3.3/
 ```
 
-9.- Compila el código utilizando g++, asegúrate que utilice la versión C++-98 para que no de errores con std::gets. Para ello, utiliza este comando si tu distro es de 64 bits.
+9.- Compila el código utilizando g++, para ello, utiliza este comando si tu distro es de 64 bits.
 
 ```
 g++ -I. -I$SYSTEMC_HOME/include -L. -L$SYSTEMC_HOME/lib-linux64 -Wl,-rpath=$SYSTEMC_HOME/lib-linux64 -o hello hello.cpp -lsystemc -lm
