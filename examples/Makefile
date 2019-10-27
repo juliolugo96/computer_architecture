@@ -7,7 +7,7 @@
 	SRCS = hello.cpp
 # Nombre del ejecutable
 	TARGET = test
-# Arquitectuda de su computadora (64 o 32)
+# Arquitectura de su sistema operativo (64 o 32)
 	ARQ = 64
 
 ##########################################################################
@@ -16,22 +16,33 @@
 # Por favor, no modifique el resto de la configuración del make
 #--------------------------------- INICIO ---------------------------------
 
-CC      = g++
-X64     = 
+CC  = g++
+X64 = 
 
 ifeq ($(ARQ),64)
 	X64 = 64
 endif
 
 ifeq ($(VERSION),systemc-2.3.1)
-	CC = g++ -std=c++98
+	CC += -std=c++98
+endif
+
+ifeq ($(VERSION),systemc-2.3.1a)
+	CC += -std=c++98
+endif
+
+ifeq ($(VERSION),systemc-2.3.1b)
+	CC += -std=c++98
+endif
+
+ifeq ($(VERSION),systemc-2.3.1c)
+	CC += -std=c++98
 endif
 
 SYSTEMC = /usr/local/$(VERSION)
 INCDIR  = -I. -I.. -I$(SYSTEMC)/include
-LIBDIR  = -L. -L.. -L$(SYSTEMC)/lib-linux$(X64)/
+LIBDIR  = -L. -L.. -L$(SYSTEMC)/lib-linux$(X64)
 LIBS    = -lsystemc -lm
-
 
 CFLAGS = -g -Wno-deprecated -Wall
 OBJS   = $(SRCS:.cpp=.o)
