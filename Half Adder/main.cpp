@@ -22,7 +22,6 @@ int sc_main(int argv, char* argc[]) {
   tb.c(c_sg);
   tb.s(s_sg);
 
-  ha.clk(clock);
   tb.clk(clock);
 
   sc_start();
