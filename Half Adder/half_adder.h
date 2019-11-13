@@ -59,6 +59,10 @@ SC_MODULE (hadd) {
   }
 
   ~hadd() {
+    /*
+      Por supuesto, cuando usan apuntadores, la memoria por seguridad no se libera sola...
+      tienen que liberarla ustedes manualmente
+    */
     delete ag;
     delete xg;
   }
