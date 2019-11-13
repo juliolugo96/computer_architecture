@@ -2,6 +2,11 @@
  * Éste testbench es igual al de la clase, solo que imprime más bonito y centrado ^^
 */
 
+/**
+ * UPDATE: solo sirve para las compuertas de 2 entradas y 1 salida...
+ * hagan su propio testbench para probar las compuertas de 1 sola entrada o modifiquen éste ^^
+*/
+
 #ifndef TESTBENCH
 #define TESTBENCH
 
