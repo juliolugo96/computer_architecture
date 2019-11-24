@@ -1,5 +1,5 @@
 /*!
- * @author Luis Adolfo Ramírez
+ * @author Luis Adolfo Ramírez Inciarte
  * @email donlarry.timoteo@gmail.com
  * @brief A program that makes assistance logs
 */
@@ -19,13 +19,16 @@ using namespace std;
 #define endl "\n"
 
 int lastDay;
+int students;
 
+void chargeStudents(void);
 void chargeLastDay(void);
 void createLog(int);
 int fluxToInt(const char*);
 void _MAIN_(int, char**);
 
 void _MAIN_(int argc, char const *argv[]) {
+	chargeStudents();
 	chargeLastDay();
 	if (argc == 1)
 		return createLog(lastDay);
@@ -37,9 +40,28 @@ void _MAIN_(int argc, char const *argv[]) {
 	}
 }
 
+void chargeStudents(void) {
+	ifstream in(fileName);
+	if (!in.good()) {
+		cerr << "\nfile is not good()\n";
+		in.close();
+		exit(1);
+	}
+	string s;
+	int c=-1;
+	while(!in.eof()){
+		getline(in,s,';');
+		if (s.size()) ++c;
+		getline(in,s);
+	}
+	students=c;
+	in.close();
+}
+
 void chargeLastDay(void) {
 	ifstream in(fileName);
 	if (!in.good()) {
+		cerr << "\nfile is not good()\n";
 		in.close();
 		exit(1);
 	}
@@ -67,6 +89,7 @@ void createLog(int day) {
 	ifstream file(fileName);
 	if (!file.good()) {
 		file.close();
+		cerr << "\nfile is not good()\n";
 		exit(1);
 	}
 
@@ -74,12 +97,15 @@ void createLog(int day) {
 	string logFileName = "day"+string(2-sDay.size(),'0')+sDay+".txt";
 	ofstream log(logFileName);
 	if (!log.good()) {
+		cerr << "\nfile is not good()\n";
 		log.close();
 		exit(1);
 	}
 
 	string line, n, id, fullName;
 	int Assistances=0;
+	stringstream inAssistances;
+	inAssistances << endl;
 
 	getline(file,line);
 	getline(file,line);
@@ -97,10 +123,14 @@ void createLog(int day) {
 		if (find(assistence.begin(), assistence.end(), 'X')!=assistence.end()) {
 			++Assistances;
 			log << n << string(2-n.size(),' ') << id << " " << fullName << endl;
+		} else {
+			inAssistances << n << string(2-n.size(),' ') << id << " " << fullName << endl;
 		}
 		getline(file,line);
 	}
 	log << "Assistances: " << Assistances << endl;
+	log << inAssistances.rdbuf();
+	log << "In-assistances: " << students - Assistances << endl;
 	file.close();
 	log.close();
 }

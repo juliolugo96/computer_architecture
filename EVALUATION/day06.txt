@@ -1,3 +1,4 @@
+1  V028440544  Agelvis Gutiérrez , José Alejandro
 2  V026587882  Angulo Dávila , Merlyn Verónica
 3  V026985737  Carrero Rojas , Juan Diego
 4  V028202145  Chacón Tamiche , Rubén Dario
@@ -10,15 +11,14 @@
 12 V025151464  Marquina Marquina , Dunia Darisney
 13 V027241325  Marquina Miranda , Jaider Armando
 14 V026765507  Mendoza Rondón , Jesús Leonardo
+15 V027777513  Monsalve Quintero , Daniel Andrés
 16 V026214491  Pedroza Palomar , Oriana Vanesa
 17 V026467778  Picón Colmenares , Jorge Andrés
 18 V026052935  Puente Araque , Oriana Alejandra
 19 V023727304  Rosales Nencka , Laura Alejandra
 20 V024190960  Sanchez Zerpa, Ivan Johan
-Assistances: 17
-
-1  V028440544  Agelvis Gutiérrez , José Alejandro
-6  V024423718  Cruz Petroccini , Daniel Fernando
-15 V027777513  Monsalve Quintero , Daniel Andrés
 21 V027241070  Valero Gutiérrez , Jesús Argenis
-In-assistances: 4
+Assistances: 20
+
+6  V024423718  Cruz Petroccini , Daniel Fernando
+In-assistances: 1
