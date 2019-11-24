@@ -104,8 +104,8 @@ void createLog(int day) {
 
 	string line, n, id, fullName;
 	int Assistances=0;
-	stringstream inAssistances;
-	inAssistances << endl;
+	stringstream missing;
+	missing << endl;
 
 	getline(file,line);
 	getline(file,line);
@@ -124,13 +124,13 @@ void createLog(int day) {
 			++Assistances;
 			log << n << string(2-n.size(),' ') << id << " " << fullName << endl;
 		} else {
-			inAssistances << n << string(2-n.size(),' ') << id << " " << fullName << endl;
+			missing << n << string(2-n.size(),' ') << id << " " << fullName << endl;
 		}
 		getline(file,line);
 	}
 	log << "Assistances: " << Assistances << endl;
-	log << inAssistances.rdbuf();
-	log << "In-assistances: " << students - Assistances << endl;
+	log << missing.rdbuf();
+	log << "Missing: " << students - Assistances << endl;
 	file.close();
 	log.close();
 }
