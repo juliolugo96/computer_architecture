@@ -21,4 +21,4 @@ Assistances: 17
 6  V024423718  Cruz Petroccini , Daniel Fernando
 15 V027777513  Monsalve Quintero , Daniel Andrés
 21 V027241070  Valero Gutiérrez , Jesús Argenis
-In-assistances: 4
+Missing: 4

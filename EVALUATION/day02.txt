@@ -21,4 +21,4 @@
 21 V027241070  Valero Gutiérrez , Jesús Argenis
 Assistances: 21
 
-In-assistances: 0
+Missing: 0
