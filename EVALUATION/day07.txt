@@ -1,0 +1,24 @@
+1  V028440544  Agelvis Gutiérrez , José Alejandro
+2  V026587882  Angulo Dávila , Merlyn Verónica
+3  V026985737  Carrero Rojas , Juan Diego
+4  V028202145  Chacón Tamiche , Rubén Dario
+5  V026880969  Cortes Chacón , Luis Alejandro
+6  V024423718  Cruz Petroccini , Daniel Fernando
+7  V025004191  Delgado Merchan , Daniel Alejandro
+8  V023723985  Gil Rivas , Miguel Fernando
+9  V028296295  Gómez Peña , Juan Andrés
+10 V023778859  Gonzalez Balza , Mery Andreina
+11 V023727237  Gutierrez Hernandez , Marcos Dixson
+12 V025151464  Marquina Marquina , Dunia Darisney
+13 V027241325  Marquina Miranda , Jaider Armando
+14 V026765507  Mendoza Rondón , Jesús Leonardo
+15 V027777513  Monsalve Quintero , Daniel Andrés
+16 V026214491  Pedroza Palomar , Oriana Vanesa
+17 V026467778  Picón Colmenares , Jorge Andrés
+18 V026052935  Puente Araque , Oriana Alejandra
+19 V023727304  Rosales Nencka , Laura Alejandra
+20 V024190960  Sanchez Zerpa, Ivan Johan
+21 V027241070  Valero Gutiérrez , Jesús Argenis
+Assistances: 21
+
+Missing: 0
