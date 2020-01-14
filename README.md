@@ -95,4 +95,23 @@ g++ -I. -I$SYSTEMC_HOME/include -L. -L$SYSTEMC_HOME/lib-linux -Wl,-rpath=$SYSTEM
 10.- Corre tu programa. Si no hubo error de ningún tipo, entonces la instalación fue correcta.
 
 
+## Instalación de QtCreator para diseño de interfaces gráficas
 
+### Pasos
+
+1.- Ejecuta el siguiente comando en una terminal:
+
+```
+  sudo apt-get install build-essential qtcreator qt5-default mesa-common-dev libglu1-mesa-dev
+```
+2.- Si deseas instalar la documentación offline y los ejemplos de aplicaciones (**Fuertemente recomendado para los que tienen un internet inestable o no tienen internet**):
+
+```
+  sudo apt-get install qt5-doc qt5-doc-html qtbase5-doc-html qtbase5-examples
+```
+
+## Cursos de QtCreator
+
+1.- Curso completo ofrecido por Void Reals [acá](https://www.youtube.com/watch?v=6KtOzh0StTc&list=PL2D1942A4688E9D63) (**Recomendado**).
+
+2.- Tutorial de los elementos básicos en español [acá](https://riptutorial.com/es/qt).
