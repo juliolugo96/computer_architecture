@@ -14,7 +14,7 @@ SC_MODULE(testbench) {
 	sc_in<bool> clk;
 	sc_out<bool> enable;
 
-	void test() {
+	void test_1() {
 		// ... Antes de siquiera dar valores, se ejecuta todo lo que sea sensible
 		// al clock en la posición 0, (en éste caso, la operación read de la cache)
 
@@ -61,9 +61,38 @@ SC_MODULE(testbench) {
 		sc_stop();
 	}
 
+	// USEN ÉSTE SEGUNDO TEST PARA VER MEJOR LA FUNCIONALIDAD DE LA LECTURA/ESCRITURA
+	// para hacerlo, tan solo deben cambiar la función seleccionada en SC_THREAD en el constructor
+	void test_2() {
+		bool enable_;
+		int data_in_;
+		int dir_ = 0;
+		cout << "en la impresión de atrás, el clock estuvo en: " << clk.read() << "\n";
+		while(dir_>=0 && dir_<=15) {
+			cout << "enable: ";
+			cin >> enable_;
+
+			cout << "dir: ";
+			cin >> dir_;
+			
+			cout << "data_in: ";
+			cin >> data_in_;
+
+			enable = enable_;
+			dir = dir_;
+			data_in = data_in_;
+			
+			wait();
+			cout << "en la impresión de atrás, el clock estuvo en: " << clk.read() << "\n";
+		}
+		sc_stop();
+	}
+
 	SC_CTOR(testbench) {
 		cout << "\n\n";
-		SC_THREAD(test);
+		SC_THREAD(test_2);
+		// PARA CAMBIAR DE TEST, SOLO CAMBIAN LA LÍNEA ANTERIOR POR:
+	//	SC_THREAD(test_2);
 		sensitive << clk;
 	}
 };

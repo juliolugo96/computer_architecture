@@ -1,3 +1,5 @@
 /EVALUATION/makeLog
 /SystemC-master
 /EVALUATION/PRIVATE/*
+/Cache/test
+/Cache/main.o
